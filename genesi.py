@@ -105,9 +105,9 @@ for item in data:
         message = message + f"{str(item['id']).zfill(3)} - {item['account']} - Error: {str(e)}\n"
         continue
 
-## Send notification to telegram
-#print("Send notification to telegram")
-#TOKEN = os.environ['TELEGRAM_API_TOKEN']
-#chat_id = os.environ['TELEGRAM_USERID']
-#url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
-#print(requests.get(url).json()) # this sends the message
+# Send notification to telegram
+print("Send notification to telegram")
+TOKEN = os.environ['TELEGRAM_API_TOKEN']
+chat_id = os.environ['TELEGRAM_USERID']
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
+print(requests.get(url).json()) # this sends the message
